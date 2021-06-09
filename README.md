@@ -1,5 +1,7 @@
 # steam-id-scraper
  Steam custom URL scraper made with Node.js
+ 
+![Preview](https://cdn.discordapp.com/attachments/706129504682246146/852128734336385044/ss.png)
 
 ### Usage
 Before using, make sure you have [Node.js](https://nodejs.org/) installed.  

@@ -1,6 +1,17 @@
 const XHR = require("xmlhttprequest");
 const fs = require('fs');
 
+function gen_random_string(length) {
+    var result           = '';
+    var characters       = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+   }
+   
+   return result;
+}
+
 module.exports = {
     get_word_list_from_web: function (count) {
         const request = new XHR.XMLHttpRequest();
@@ -35,5 +46,14 @@ module.exports = {
         }
         else
             console.error("[-] An unknown error occured.");
+    },
+    get_wordlist_random: function(letters, count) {
+        let wordlist = [];
+
+        for (var i = 0; i < count; i++) {
+            wordlist.push(gen_random_string(letters));
+        }
+
+        return wordlist;
     }
 }

@@ -1,7 +1,6 @@
 const readline = require('readline-sync');
 const fs = require('fs');
 const utils = require('./utils/utils');
-const { get_word_list_from_text, get_word_list_from_web } = require('./utils/utils');
 
 console.log('      _                         _     _ \r\n     | |                       (_)   | |\r\n  ___| |_ ___  __ _ _ __ ___    _  __| |\r\n \/ __| __\/ _ \\\/ _` | \'_ ` _ \\  | |\/ _` |\r\n \\__ \\ ||  __\/ (_| | | | | | | | | (_| |\r\n |___\/\\__\\___|\\__,_|_| |_| |_| |_|\\__,_|\r\n                                        ');
 console.log('                                     \r  ___  ___ _ __ __ _ _ __   ___ _ __ \r\n \/ __|\/ __| \'__\/ _` | \'_ \\ \/ _ \\ \'__|\r\n \\__ \\ (__| | | (_| | |_) |  __\/ |   \r\n |___\/\\___|_|  \\__,_| .__\/ \\___|_|   \r\n                    | |              \r\n                    |_|   \n');

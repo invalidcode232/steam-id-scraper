@@ -9,6 +9,12 @@ Steam ID Scraper supports 3 word sources
  - Random string with customizable letter count
  - Custom wordlist file
 
+### Discord Webhook integration
+Steam ID scraper can output results to a Discord Webhook. 
+
+**Enabling Webhook**  
+In `config.json`, set `enableDiscordWebhook` to `true` and specify `webhookURL` to a Discord Webhook link.
+
 ### Usage
 Before using, make sure you have [Node.js](https://nodejs.org/) installed.  
 
@@ -22,4 +28,4 @@ node scraper.js
 ```
 
 **Output**  
-Steam IDs that have not been used will be stored to `output.txt`
+Steam IDs that have not been used will be stored to `output.txt` (Output file name is changeable in `config.json`)

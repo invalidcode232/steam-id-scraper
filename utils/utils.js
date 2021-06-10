@@ -55,5 +55,17 @@ module.exports = {
         }
 
         return wordlist;
+    },
+    send_discord_webhook: function (message, url) {
+        const request = new XHR.XMLHttpRequest();
+        request.open("POST", url, false);
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        let data = {
+            "content": message,
+        }
+
+        const json = JSON.stringify(data);
+
+        request.send(json);
     }
 }

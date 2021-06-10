@@ -1,3 +1,5 @@
+const { webhookURL, enableDiscordWebhook, outputFile } = require("./config.json");
+
 const readline = require('readline-sync');
 const fs = require('fs');
 const utils = require('./utils/utils');
@@ -45,6 +47,12 @@ let log_text = "";
 for (var i = 0; i < wordlist.length; i++) {
     if (utils.is_id_available(wordlist[i]) != -1){
         console.log(`[+] ID '${wordlist[i].toString()}' is ${chalk.green.bold('currently available!')}`);
+
+        if (enableDiscordWebhook) {
+            let message = `[+] ID ${wordlist[i].toString()} is currently available!`;
+            utils.send_discord_webhook(message, webhookURL);            
+        }
+
         log_text += wordlist[i] + "\n";
     }
     else {
@@ -52,4 +60,4 @@ for (var i = 0; i < wordlist.length; i++) {
     }
 }
 
-fs.writeFileSync("output.txt", log_text);
+fs.writeFileSync(outputFile, log_text);

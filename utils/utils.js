@@ -23,9 +23,7 @@ module.exports = {
         else
             console.error("[-] An unknown error occured.");
     },
-    get_word_list_from_text: function (filename) {
-        let array = fs.readFileSync(filename).toString().split("\n");
-
+    get_word_list_from_text: function (array) {
         let wordlist = [];
         for (var i = 0; i < array.length; i++) {
             wordlist[i] = array[i].replace(/(\r\n|\n|\r)/gm, "")

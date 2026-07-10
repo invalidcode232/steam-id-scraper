@@ -1,5 +1,6 @@
 {
     "outputFile": "output.txt",
     "enableDiscordWebhook": false,
-    "webhookURL": ""
+    "webhookURL": "",
+    "requestDelayMs": 1500
 }
